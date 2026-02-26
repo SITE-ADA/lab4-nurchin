@@ -11,18 +11,18 @@ public class Product {
     private BigDecimal price;
     private LocalDate expirationDate;
 
-    // 1. Parametresiz (boş) Constructor
+    // Empty Constructor
     public Product() {
     }
 
-    // 2. 'id' HARİÇ tüm alanları içeren Constructor
+    // 2. Constructor that excludes Id
     public Product(String productName, BigDecimal price, LocalDate expirationDate) {
         this.productName = productName;
         this.price = price;
         this.expirationDate = expirationDate;
     }
 
-    // 3. TÜM alanları içeren Constructor
+    // 3. Constructor that includes everything
     public Product(UUID id, String productName, BigDecimal price, LocalDate expirationDate) {
         this.id = id;
         this.productName = productName;
@@ -30,7 +30,7 @@ public class Product {
         this.expirationDate = expirationDate;
     }
 
-    // --- Getter ve Setter Metotları ---
+    // --- Getter and Setter Methods
 
     public UUID getId() { return id; }
     public void setId(UUID id) { this.id = id; }
